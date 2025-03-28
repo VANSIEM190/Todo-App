@@ -41,7 +41,9 @@ const Sidebar = React.memo(({userEmail}) => {
         </Link>
       </ul>
       <div className="flex justify-center items-center gap-2 px-4 py-6">
-        <i className="fab fa-github text-4xl cursor-pointer" ></i>
+        <a href="https://github.com/VANSIEM190/Todo-app/" target="_blank" rel="noopener noreferrer">
+          <i className="fab fa-github text-4xl cursor-pointer"></i>
+        </a>
         <div className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
             {userEmail ? (userEmail.split("@")[0]) : "tu es hors ligne"}
         </div>
