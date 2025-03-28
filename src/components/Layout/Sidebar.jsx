@@ -43,7 +43,7 @@ const Sidebar = React.memo(({userEmail}) => {
       <div className="flex justify-center items-center gap-2 px-4 py-6">
         <i className="fab fa-github text-4xl cursor-pointer" ></i>
         <div className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-            {userEmail ? (userEmail.split("@")[0]) : "Connexion"}
+            {userEmail ? (userEmail.split("@")[0]) : "tu es hors ligne"}
         </div>
         </div>
     </aside>}
