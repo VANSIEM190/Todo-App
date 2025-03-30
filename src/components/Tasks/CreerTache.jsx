@@ -3,7 +3,7 @@ import { Formik } from "formik";
 import * as Yup from "yup";
 import { db } from "../../services/firebaseConfig";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-
+import { useNavigate } from 'react-router-dom';
 import useResize from "../../hooks/useResize";
 import { useAuth } from "../../context/AuthoContext";
 import Navbar from "../../components/Layout/Navbar";
@@ -13,6 +13,8 @@ const CreerTache = () => {
     // États pour les messages de succès/erreur
     const [message, setMessage] = useState("");
     const [success, setSuccess] = useState(false);
+
+    const navigate = useNavigate();
 
     // Récupération du contexte utilisateur
     const { userEmail } = useAuth();
@@ -59,6 +61,7 @@ const CreerTache = () => {
                             setMessage("✅ Tâche ajoutée avec succès !");
                             setSuccess(true);
                             resetForm();
+                            navigate("/mes-tâches");
                         } catch (error) {
                             console.error(error);
                             setMessage("❌ Erreur lors de l'ajout de la tâche !");
