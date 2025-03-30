@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword  } from 'firebase/auth';
+import { getAuth  } from 'firebase/auth';
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -26,4 +26,4 @@ const db = getFirestore(app);
 
 
 // Exporter l'authentification et les méthodes d'authentification
-export { auth, signInWithEmailAndPassword ,  db };
+export { auth,  db };
